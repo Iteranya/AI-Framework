@@ -1,0 +1,13 @@
+# Eliminate all pesky compiled Python files
+*.pyc
+
+# Zap any __pycache__ directories from existence
+__pycache__/
+
+# Exterminate pycache directories within core
+core/__pycache__/
+
+*.json
+.vscode
+*.zip
+
