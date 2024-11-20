@@ -624,7 +624,7 @@ class ArtificialIntelligenceModule():
     def __init__(self):
         self.aiDict = []
 
-    def stage(self,name):
+    def stage(self,name:str):# Should I add GBNF here????
         result = {
             "type":"stage",
             "stage":name
@@ -632,12 +632,36 @@ class ArtificialIntelligenceModule():
         self.aiDict.append(result)
         return result
 
-
-    def midi(self):
+    def instruction(self,persona:str,instruction:str,example:list): # Or here???
         result = {
-            
+            "type":"instruction",
+            "persona":persona,
+            "instruction":instruction,
+            "example":example
+        }
+        self.aiDict.append(result)
+        return result
+    
+    def context(self,context:str):
+        result = {
+            "type":"reasoning",
+            "context":context
+        }
+        self.aiDict.append(result)
+        return result
+    
+    def reasoning(self,reasoning:map): # Turns into a GBNF
+        result = {
+            "type":"reasoning",
+            "reasoning":reasoning
         }
         self.aiDict.append(result)
         return result
 
-        
+    def next(self,next_stage):
+        result = {
+            "type":"next",
+            "stage":next_stage
+        }
+        self.aiDict.append(result)
+        return result 
