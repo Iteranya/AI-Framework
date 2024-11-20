@@ -127,3 +127,16 @@ def compile_sound(sounds: list[dict]) -> dict:
     for sound_dict in sounds:
         combined_dict.update(sound_dict)
     return combined_dict
+
+
+
+
+def compile_ai(sounds: list[dict]) -> dict:
+    combined_dict = {}
+    for sound_dict in sounds:
+        combined_dict.update(sound_dict)
+    return combined_dict
+
+def ai_compile(name,sounds):
+    result = compile_ai(sounds)
+    save_to_json_file(result,name+".json")

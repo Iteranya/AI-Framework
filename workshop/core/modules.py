@@ -644,7 +644,7 @@ class ArtificialIntelligenceModule():
     
     def context(self,context:str):
         result = {
-            "type":"reasoning",
+            "type":"context",
             "context":context
         }
         self.aiDict.append(result)
@@ -657,11 +657,3 @@ class ArtificialIntelligenceModule():
         }
         self.aiDict.append(result)
         return result
-
-    def next(self,next_stage):
-        result = {
-            "type":"next",
-            "stage":next_stage
-        }
-        self.aiDict.append(result)
-        return result 
