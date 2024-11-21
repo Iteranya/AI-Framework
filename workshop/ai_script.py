@@ -9,12 +9,12 @@ a = Andr
 p = "Player" 
 storyName = "demo" # This will be the name of the Json File
 
-def story():
-
+def script():
+    
     return ai.aiDict
 
 
-def main():ai_compile(storyName,script=story()) # Yeah, just run this file :v
+def main():ai_compile(storyName,script=script()) # Yeah, just run this file :v
 
 if __name__ == "__main__":
     main() 
