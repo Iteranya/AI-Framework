@@ -2,7 +2,7 @@ from dataclasses import dataclass
 # Feel free to expand these base classes~
 
 @dataclass
-class Character:
+class Persona:
     id:str|None=None
     name: str|None = None
     description: str|None = None
@@ -13,3 +13,4 @@ class Character:
     states: list|None = None
     maxhealth: int = 40
     traits: list|None = None
+
